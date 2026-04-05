@@ -1,0 +1,578 @@
+/* ========= GLOBAL ========= */
+html{
+  scroll-behavior:smooth;
+}
+
+*{
+  box-sizing:border-box;
+}
+
+img{
+  max-width:100%;
+  height:auto;
+}
+
+/* ========= NAV ========= */
+.navbar{
+  position:sticky;
+  top:0;
+  z-index:999;
+}
+
+.navbar-brand{
+  font-family:"Bungee",sans-serif;
+  font-weight:300;
+}
+
+/* ========= HOME ========= */
+.home{
+  background-image:url(./assets/bg.jpg);
+  min-height:100vh;
+  width:100%;
+  background-repeat:no-repeat;
+  background-size:cover;
+}
+
+.element{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin-top:7rem;
+  gap:3rem;
+}
+
+.writing{
+  color:white;
+  font-family:"Bungee",sans-serif;
+  margin-left: 6rem;
+}
+
+.writing h2{
+  transition:1.2s;
+}
+
+.writing h2:hover{
+  transform:scale(1.05);
+  text-shadow:
+  0 0 5px #0ff,
+  0 0 10px #0ff,
+  0 0 20px #0ff,
+  0 0 40px #0ff;
+}
+
+.writing h4{
+  transition:1s;
+}
+
+.writing h4:hover{
+  text-shadow:
+  0 0 5px #0ff,
+  0 0 10px #0ff,
+  0 0 20px #0ff,
+  0 0 40px #0ff;
+}
+
+/* typing text */
+.w{
+  font-family:'Courier New',monospace;
+  display:inline-block;
+  overflow:hidden;
+  white-space:nowrap;
+  border-right:3px solid black;
+  animation:typing 3s steps(22) forwards, hideCursor 0s 3s forwards;
+  font-size:0.9rem;
+}
+
+@keyframes typing{
+  from{width:0}
+  to{width:100%}
+}
+
+@keyframes hideCursor{
+  to{border-right:none}
+}
+
+/* profile image */
+.image{
+  height:20rem;
+  width:17rem;
+  border-radius:50%;
+  display:block;
+  margin:auto;
+  animation:move 5s ease-in-out infinite;
+  transition:transform .8s,box-shadow .4s;
+}
+
+
+.image:hover{
+  animation-play-state:paused;
+  transform:scale(1.07);
+  box-shadow:
+  0 0 5px #fff,
+  0 0 15px #fff,
+  0 0 20px #fff;
+}
+
+@keyframes move{
+  0%{transform:translate(0,0)}
+  25%{transform:translateX(3px)}
+  50%{transform:translate(0,0)}
+  75%{transform:translateX(-7px)}
+  100%{transform:translate(0,0)}
+}
+
+
+.writing i{
+  margin-left:1rem;
+}
+
+.btn{
+  margin-top:1rem;
+  margin-left:1rem;
+  transition:1s;
+}
+
+.btn:hover{
+  transform:scale(1.1);
+  box-shadow:
+  0 0 5px #fff,
+  0 0 15px #fff,
+  0 0 20px #fff;
+}
+
+.icons i{
+  font-size:1.6rem;
+  opacity:.6;
+  transition:1s;
+}
+
+.icons i:hover{
+  text-shadow:
+  0 0 10px #fff,
+  0 0 25px #fff,
+  0 0 40px #fff;
+  transform:scale(1.1);
+  opacity:1;
+}
+
+/* ========= ABOUT ========= */
+.about{
+  background-image:url(./assets/about-bg.jpg);
+  background-size:cover;
+  min-height:100vh;
+  width:100%;
+  padding-top:1.5rem;
+}
+
+.about h2{
+  color:#0ff;
+  text-align:center;
+  font-family:"Bungee",sans-serif;
+  text-decoration:underline;
+}
+
+.education{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  color:#fff;
+  gap:1rem;
+}
+
+.varsity,.college{
+  border:2px solid white;
+  border-radius:9px;
+  text-align:center;
+  width:50%;
+  font-family:'Segoe UI',Tahoma;
+  box-shadow:2px 2px 4px white;
+  transition:1s;
+  padding:1rem;
+  margin-bottom: 0.5rem;
+}
+
+.cstulogo,.hpclogo{
+  height:9rem;
+}
+
+.education h4{
+  font-family:"Bungee",sans-serif;
+  font-weight:300;
+  color:#0ff;
+}
+
+.varsity:hover,
+.college:hover{
+  transform:scale(1.03);
+  box-shadow:3px 3px 5px white;
+}
+
+/* ========= SKILLS ========= */
+.skills{
+  background-image:url(./assets/skill-bg.jpg);
+  background-size:cover;
+  min-height:100vh;
+  width:100%;
+  color:#fff;
+}
+
+.skills h2{
+  color:#0ff;
+  text-align:center;
+  font-family:"Bungee",sans-serif;
+  text-decoration:underline;
+}
+
+.tag{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  margin:4px;
+  padding:6px 10px;
+  background:#f7fafc;
+  border:1px solid #e2e8f0;
+  border-radius:6px;
+  font-size:14px;
+  font-weight:500;
+  color:#2d3748;
+  transition:.5s;
+}
+
+.tag:hover{
+  transform:scale(1.05);
+  box-shadow:
+  0 0 5px #fff,
+  0 0 12px #fff,
+  0 0 20px #fff;
+}
+
+.lang,.frontend,.backend,.database,.others{
+  margin:1rem 2rem;
+  font-family:'Segoe UI',Tahoma;
+}
+
+/* ========= PROBLEM SOLVING ========= */
+.problem-solving{
+  background-image:url(./assets/ps-bg.jpg);
+  background-size:cover;
+  min-height:100vh;
+  width:100%;
+  color:#fff;
+  padding-top:2rem;
+}
+
+.problem-solving h2{
+  color:#0ff;
+  text-align:center;
+  font-family:"Bungee",sans-serif;
+  text-decoration:underline;
+}
+
+/* CF sits above, centered */
+.cf{
+  display:block;
+  width:50%;
+  margin:2rem auto;
+  text-align:center;
+  border:2px solid white;
+  border-radius:9px;
+  padding:1rem;
+  transition:.8s;
+}
+
+/* Row holding CodeChef + LeetCode */
+.linee{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:2rem;
+  padding-bottom:2rem;
+}
+
+.cchef,.LeetCode{
+  width:40%;
+  text-align:center;
+  border:2px solid white;
+  border-radius:9px;
+  padding:1rem;
+  transition:.8s;
+}
+
+.cf img,.cchef img,.LeetCode img{
+  height:4rem;
+}
+
+.cf:hover,.cchef:hover,.LeetCode:hover{
+  transform:scale(1.08);
+  box-shadow:
+  0 0 5px #fff,
+  0 0 12px #fff,
+  0 0 20px #fff;
+}
+
+/* ========= ACHIEVEMENTS ========= */
+.l-a{
+  background-image:url(./assets/ps-bg\ -\ Copy.jpg);
+  background-size:cover;
+  min-height:100vh;
+  color:#fff;
+}
+
+.l-a h2{
+  color:#0ff;
+  text-align:center;
+  font-family:"Bungee",sans-serif;
+  text-decoration:underline;
+}
+
+.iupc{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+}
+
+.duet,.aust,.mu,.iiuc,.club,.yunet{
+  border:2px solid white;
+  text-align:center;
+  width:30%;
+  margin:1rem;
+  border-radius:2rem;
+  padding:1rem;
+  transition:.8s;
+}
+
+.duet img,.aust img,.mu img,.iiuc img,.club img,.yunet img{
+  height:5rem;
+  border-radius:50%;
+}
+
+.duet:hover,.mu:hover,.iiuc:hover,.aust:hover,.club:hover,.yunet:hover{
+  transform:scale(1.06);
+  box-shadow:
+  0 0 5px #fff,
+  0 0 12px #fff,
+  0 0 20px #fff;
+}
+
+/* ========= PROJECT ========= */
+.project{
+  background-image:url(./assets/ps-bg.jpg);
+  background-size:cover;
+  min-height:100vh;
+  padding-top:2rem;
+  color:#fff;
+}
+
+.project h2{
+  color:#0ff;
+  text-align:center;
+  font-family:"Bungee",sans-serif;
+  text-decoration:underline;
+}
+
+.proj{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+}
+
+.food-del,.calc , .wanderlust{
+  border:2px solid white;
+  text-align:center;
+  width:40%;
+  margin:1rem;
+  border-radius:2rem;
+  padding:1rem;
+  transition:.8s;
+}
+
+.food-del img{height:10rem}
+.calc img{height:7rem}
+.wanderlust img{height:7rem}
+
+.food-del:hover,.calc:hover, .wanderlust:hover{
+  transform:scale(1.06);
+  box-shadow:
+  0 0 5px #fff,
+  0 0 12px #fff,
+  0 0 20px #fff;
+}
+
+/* ========= CONTACT ========= */
+.contact{
+  background-image:url(./assets/ps-bg\ -\ Copy.jpg);
+  background-size:cover;
+  min-height:100vh;
+}
+
+.contact h2{
+  color:#0ff;
+  text-align:center;
+  font-family:"Bungee",sans-serif;
+  text-decoration:underline;
+  padding-top:3.5rem;
+}
+
+form{
+  padding:0 2rem;
+}
+
+#fname,#lname,#phone,#subject,#email,#msg{
+  margin:.6rem;
+  border-radius:5px;
+  color:white;
+  font-size:1.1rem;
+  background:#232832;
+}
+
+input::placeholder,
+textarea::placeholder{
+  color:#fff;
+  font-family:'Courier New',monospace;
+  padding-left:1rem;
+}
+
+#email{
+  width:50%;
+  height:2.5rem;
+}
+
+.link{
+  font-size:2.2rem;
+  text-align:center;
+  margin-top:2rem;
+}
+
+.link i{
+  margin:1rem;
+  transition:1s;
+  color:white;
+  opacity:.2;
+}
+
+.link i:hover{
+  transform:scale(1.06);
+  text-shadow:
+  0 0 5px #fff,
+  0 0 12px #fff,
+  0 0 20px #fff;
+  opacity:1;
+}
+
+/* scroll animation */
+.section{
+  opacity:0;
+  transform:translateY(60px);
+  transition:.8s;
+}
+
+.section.show{
+  opacity:1;
+  transform:translateY(0);
+}
+
+#msg{
+  width:100%;
+  max-width:600px;
+  min-height:120px;
+}
+
+/* ========= TABLET ========= */
+@media(max-width:992px){
+
+  .element{
+    flex-direction:column-reverse;
+    margin-top:4rem;
+  }
+
+  .image{
+    width:14rem;
+    height:14rem;
+    margin: auto;
+  }
+
+  .varsity,.college,
+  .food-del,.calc,.wanderlust{
+    width:70%;
+  }
+
+  .cf{
+    width:70%;
+  }
+
+  .cchef,.LeetCode{
+    width:70%;
+  }
+
+  .duet,.aust,.mu,.iiuc,.club,.yunet{
+    width:45%;
+  }
+
+  #msg{
+    max-width:100%;
+    min-height:110px;
+  }
+}
+
+/* ========= MOBILE ========= */
+@media(max-width:576px){
+
+  .element{
+    flex-direction:column-reverse;
+    text-align:center;
+  }
+
+  .image{
+    width:12rem;
+    height:12rem;
+  }
+
+  .varsity,.college,
+  .food-del,.calc,.wanderlust,
+  .duet,.aust,.mu,.iiuc,.club,.yunet{
+    width:95%;
+  }
+
+  .cf,.cchef,.LeetCode{
+    width:95%;
+  }
+
+  .tag{
+    font-size:.8rem;
+  }
+
+  .icons i{
+    font-size:1.3rem;
+  }
+
+  .link{
+    font-size:1.6rem;
+  }
+
+  .w{
+    animation:none;
+    border-right:none;
+    white-space:normal;
+    font-size:.75rem;
+  }
+
+  #email{
+  width:90%;
+
+ }
+
+  #msg{
+    min-height:90px;
+    font-size:0.95rem;
+  }
+
+  .writing{
+    margin-left:0rem;
+  }
+}
+
+@media(min-width:993px){
+  .image{
+    margin:0 4rem 0 0;
+  }
+}
